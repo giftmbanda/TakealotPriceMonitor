@@ -9,6 +9,8 @@
   "author": "Tom Baranowicz",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.20.0",
+    "chalk": "^4.1.0",
     "cheerio": "^1.0.0-rc.3",
     "cron": "^1.8.2",
     "nodemailer": "^6.4.2",
