@@ -49,14 +49,14 @@ sendEmail = async (data) => {
       pass: EMAIL_PASSWORD, // your gmail password
     },
   });
-  
+
   let mailOptions = {
     subject: `Takealot.com Deal`,
     to: `giftmbanda@gmail.com`, // recipient email
     from: `TakealotPriceMonitor`,
     html: `<h2>Hi there!</h2>
     <p>The ${title} is now ${price}</p>
-    <p>Please click <a href="">here</a> to reset your password.</p>`,
+    <p>Please click <a href="">here</a> to view or buy the product.</p>`,
   };
   return await transporter.sendMail(mailOptions);
 };
