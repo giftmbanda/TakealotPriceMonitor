@@ -49,6 +49,7 @@ sendEmail = async (data) => {
       pass: EMAIL_PASSWORD, // your gmail password
     },
   });
+  
   let mailOptions = {
     subject: `Takealot.com Deal`,
     to: `giftmbanda@gmail.com`, // recipient email
@@ -57,7 +58,7 @@ sendEmail = async (data) => {
     <p>The ${title} is now ${price}</p>
     <p>Please click <a href="">here</a> to reset your password.</p>`,
   };
-  return transporter.sendMail(mailOptions);
+  return await transporter.sendMail(mailOptions);
 };
 
 // format 'R 3,399' to '3399' or 'R 3,399.99' to '3399.99'
