@@ -12,9 +12,7 @@ scrap = async () => {
 
   let data = await page.evaluate(() => {
     let title = document.querySelector('div[class="cell auto"] > h1').innerText;
-    let price = document.querySelector(
-      'span[class="currency plus currency-module_currency_29IIm"]'
-    ).innerText;
+    let price = document.querySelector('span[class="currency plus currency-module_currency_29IIm"]').innerText;
     return { title, price };
   });
 
@@ -23,7 +21,7 @@ scrap = async () => {
 };
 
 startTracking = async (dealPrice) => {
-  let job = new CronJob("*/5 * * * * *", async () => { //runs every 5 seconds in this config for development purpose
+  let job = new CronJob("*/5 * * * * *", async () => { //runs every 5 seconds in this config 
       let data = await scrap();
       let { title, price } = data;
 
